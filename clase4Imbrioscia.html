@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/css/imbrioscia_ecommerce.css"> -->
+    <title>Clase 4</title>
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="clase3Imbrioscia.html">E-commerce simplificado</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item m-auto">
+                        <a class="nav-link" href="#">Pagina principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="clase3Imbrioscia.html">Carrito<span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-secondary btn-number">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <a class="btn btn-success btn-sm ml-3" href="#">
+                        <i class="fa fa-shopping-cart"></i>Carrito<span class="badge badge-light">numero</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">CODERHOUSE E-COMMERCE TEST</h1>
+        </div>
+    </section>
+
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-8">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"> </th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Disponibilidad</th>
+                                <th scope="col" class="text-center">Cantidad</th>
+                                <th scope="col" class="text-right">Precio total</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                                <td>Producto 1</td>
+                                <td>En stock</td>
+                                <td>
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                    <div class="quantity">
+                                        <input id="prod1Input" type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
+                                            size="4">
+                                    </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">124,90 $</td>
+                                <td class="text-right">
+                                    <button class="btn btn-sm btn-success" onclick="addToCart('1')">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /></td>
+                                <td>Producto 2</td>
+                                <td>En stock</td>
+                                <td>
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                    <div class="quantity">
+                                        <input id="prod2Input" type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
+                                            size="4">
+                                    </div>
+                                    </div
+                                ></td>
+                                <td class="text-right">33,90 $</td>
+                                <td class="text-right">
+                                    <button class="btn btn-sm btn-success" onclick="addToCart('2')">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                                <td>Producto 3</td>
+                                <td>En stock</td>
+                                <td>
+                                    <div class="col-4 col-sm-4 col-md-4">
+                                    <div class="quantity">
+                                        <input id="prod3Input" type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
+                                            size="4">
+                                    </div>
+                                    </div
+                                ></td>
+                                <td class="text-right">70,00 $</td>
+                                <td class="text-right">
+                                    <button class="btn btn-sm btn-success" onclick="addToCart('3')">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Sub-Total</td>
+                                <td class="text-right">255,90 $</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Costo envio</td>
+                                <td class="text-right">6,90 $</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong>Total</strong></td>
+                                <td class="text-right"><strong>346,90 $</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="3" class="text-center">Carrito</th>
+                            </tr>
+                            <tr>
+                                <th class="text-center">Productos</th>
+                                <th class="text-center">Cantidad</th>
+                                <th class="text-center">Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="row">
+                    <div class="col-sm-12  col-md-6">
+                        <button onclick="workInProgress()" class="btn btn-block btn-light">Continuar comprando</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <button onclick="" class="btn btn-lg btn-block btn-success text-uppercase">Pagar</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <button onclick="" class="btn btn-lg btn-block btn-success text-uppercase">Ver perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3">
+                    <h5>Sobre nosotros</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <p class="mb-0">
+                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                    <h5>Mapa de sitio</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Pagina principal</a></li>
+                        <li><a href="">Nosotres</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h5>Contacto</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-home mr-2"></i> Empresa</li>
+                        <li><i class="fa fa-envelope mr-2"></i> email@eempresa.com.ar</li>
+                        <li><i class="fa fa-phone mr-2"></i> + 54 911 xxxx xxxx</li>
+                    </ul>
+                </div>
+                <div class="col-12 copyright mt-3">
+                    <p class="float-left">
+                        <a href="#">Volver al principio</a>
+                    </p>
+                    <p class="text-right text-muted">2021 Diseñando por <a href="#"><i>buenosCodes</i></a> | <span>v. 1.0</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/clase4Imbrioscia.js"></script>
+</body>
+
