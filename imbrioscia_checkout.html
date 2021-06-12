@@ -53,9 +53,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Productos</a>
                 </li>
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="clase3Imbrioscia.html">Carrito<span class="sr-only">(current)</span></a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
@@ -82,7 +79,6 @@
       </div>
   </section>
 
-  <!-- <body class="bg-light"> -->
   <div class="container">
     <div class="py-5 text-center">
       <h2>Fomulario Checkout</h2>
@@ -95,64 +91,22 @@
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-muted">Tu carrito</span>
-          <span class="badge badge-secondary badge-pill">3</span>
+          <span class="badge badge-secondary badge-pill" id="prodQty">3</span>
         </h4>
-        <ul class="list-group mb-3">
-          <li
-            class="list-group-item d-flex justify-content-between lh-condensed"
-          >
-            <div>
-              <h6 class="my-0">Product name</h6>
-              <small class="text-muted">Brief description</small>
-            </div>
-            <span class="text-muted">$12</span>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between lh-condensed"
-          >
-            <div>
-              <h6 class="my-0">Second product</h6>
-              <small class="text-muted">Brief description</small>
-            </div>
-            <span class="text-muted">$8</span>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between lh-condensed"
-          >
-            <div>
-              <h6 class="my-0">Third item</h6>
-              <small class="text-muted">Brief description</small>
-            </div>
-            <span class="text-muted">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Codigo de promo</h6>
-              <small>ABONO SUSCRIPCION</small>
-            </div>
-            <span class="text-success">-$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total ($)</span>
-            <strong>$20</strong>
-          </li>
+        <ul class="list-group mb-3" id="cartProdList">
         </ul>
 
-        <form class="card p-2">
+        <form class="card p-2" id="promoInput" style="display: none;">
           <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Promo"
-            />
+            <input type="text" class="form-control" placeholder="Promo" id="promoText"/>
             <div class="input-group-append">
-              <button type="submit" class="btn btn-secondary">Utilizar</button>
+              <button type="submit" onclick="promoButton(event)" class="btn btn-secondary">Utilizar</button>
             </div>
           </div>
         </form>
       </div>
       <div class="col-md-8 order-md-1">
-        <h4 class="mb-3">Direccion de facturacion</h4>
+        <h4 class="mb-3">Dirección de facturación</h4>
         <form class="needs-validation" novalidate="">
           <div class="row">
             <div class="col-md-6 mb-3">
@@ -166,7 +120,7 @@
                 required=""
               />
               <div class="invalid-feedback">
-                Se requiere su primer nombre valido.
+                Se requiere su primer nombre válido.
               </div>
             </div>
             <div class="col-md-6 mb-3">
@@ -179,16 +133,13 @@
                 value=""
                 required=""
               />
-              <div class="invalid-feedback">Se requiere un apellido valido.</div>
+              <div class="invalid-feedback">Se requiere un apellido válido.</div>
             </div>
           </div>
 
           <div class="mb-3">
             <label for="username">Usuario</label>
             <div class="input-group">
-              <!-- <div class="input-group-prepend">
-                <span class="input-group-text">@</span>
-              </div> -->
               <input
                 type="text"
                 class="form-control"
@@ -212,12 +163,12 @@
               placeholder="@ejemplo.com"
             />
             <div class="invalid-feedback">
-              Por favor introducir un mail valido.
+              Por favor introducir un mail válido.
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="address">Direccion de envio</label>
+            <label for="address">Dirección de envío</label>
             <input
               type="text"
               class="form-control"
@@ -226,7 +177,7 @@
               required=""
             />
             <div class="invalid-feedback">
-              Por favor introducir una direccion de envio.
+              Por favor introducir una direccion de envío.
             </div>
           </div>
 
@@ -249,28 +200,51 @@
                 required=""
               >
                 <option value="">Elegir...</option>
-                <option>United States</option>
+                <option>Argentina</option>
               </select>
               <div class="invalid-feedback">
-                Please select a valid country.
+                Por favor, seleccionar pais
               </div>
             </div>
             <div class="col-md-4 mb-3">
-              <label for="state">State</label>
+              <label for="state">Provincia</label>
               <select
                 class="custom-select d-block w-100"
                 id="state"
                 required=""
               >
                 <option value="">Choose...</option>
-                <option>California</option>
+                <option>Buenos Aires</option>
+                <option>Capital Federal</option>
+                <option>Catamarca</option>
+                <option>Chaco</option>
+                <option>Chubut</option>
+                <option>Córdoba</option>
+                <option>Corrientes</option>
+                <option>Entre Ríos</option>
+                <option>Formosa</option>
+                <option>Jujuy</option>
+                <option>La Pampa</option>
+                <option>La Rioja</option>
+                <option>Mendoza</option>
+                <option>Misiones</option>
+                <option>Neuquén</option>
+                <option>Río Negro</option>
+                <option>Salta</option>
+                <option>San Juan</option>
+                <option>San Luis</option>
+                <option>Santa Cruz</option>
+                <option>Santa Fe</option>
+                <option>Santiago del Estero</option>
+                <option>Tierra del Fuego</option>
+                <option>Tucumán</option>
               </select>
               <div class="invalid-feedback">
-                Please provide a valid state.
+                Por favor, seleccionar provincia.
               </div>
             </div>
             <div class="col-md-3 mb-3">
-              <label for="zip">Zip</label>
+              <label for="zip">Código Postal</label>
               <input
                 type="text"
                 class="form-control"
@@ -278,7 +252,7 @@
                 placeholder=""
                 required=""
               />
-              <div class="invalid-feedback">Zip code required.</div>
+              <div class="invalid-feedback">Código postal requerido.</div>
             </div>
           </div>
           <hr class="mb-4" />
@@ -289,7 +263,7 @@
               id="same-address"
             />
             <label class="custom-control-label" for="same-address"
-              >Shipping address is the same as my billing address</label
+              >La dirección de envío es la misma que la dirección de facturación</label
             >
           </div>
           <div class="custom-control custom-checkbox">
@@ -299,12 +273,12 @@
               id="save-info"
             />
             <label class="custom-control-label" for="save-info"
-              >Save this information for next time</label
+              >Guardar esta información para la próxima</label
             >
           </div>
           <hr class="mb-4" />
 
-          <h4 class="mb-3">Payment</h4>
+          <h4 class="mb-3">Método de pago</h4>
 
           <div class="d-block my-3">
             <div class="custom-control custom-radio">
@@ -317,7 +291,7 @@
                 required=""
               />
               <label class="custom-control-label" for="credit"
-                >Credit card</label
+                >Tarjeta de crédito</label
               >
             </div>
             <div class="custom-control custom-radio">
@@ -329,7 +303,7 @@
                 required=""
               />
               <label class="custom-control-label" for="debit"
-                >Debit card</label
+                >Tarjeta de débito</label
               >
             </div>
             <div class="custom-control custom-radio">
@@ -345,7 +319,7 @@
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="cc-name">Name on card</label>
+              <label for="cc-name">Nombre que figura en la tarjeta</label>
               <input
                 type="text"
                 class="form-control"
@@ -353,11 +327,11 @@
                 placeholder=""
                 required=""
               />
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">Name on card is required</div>
+              <small class="text-muted">Nombre completo como figura en la tarjeta</small>
+              <div class="invalid-feedback">Se requiere el nombre que figura en la tarjeta</div>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="cc-number">Credit card number</label>
+              <label for="cc-number">Número de tarjeta de crédito</label>
               <input
                 type="text"
                 class="form-control"
@@ -366,13 +340,13 @@
                 required=""
               />
               <div class="invalid-feedback">
-                Credit card number is required
+                Se requiere el número de tarjeta de crédito
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-3 mb-3">
-              <label for="cc-expiration">Expiration</label>
+              <label for="cc-expiration">Fecha de vencimiento</label>
               <input
                 type="text"
                 class="form-control"
@@ -380,10 +354,10 @@
                 placeholder=""
                 required=""
               />
-              <div class="invalid-feedback">Expiration date required</div>
+              <div class="invalid-feedback">Se requiere la fecha de expiración</div>
             </div>
             <div class="col-md-3 mb-3">
-              <label for="cc-cvv">CVV</label>
+              <label for="cc-cvv">Código de seguridad</label>
               <input
                 type="text"
                 class="form-control"
@@ -391,18 +365,18 @@
                 placeholder=""
                 required=""
               />
-              <div class="invalid-feedback">Security code required</div>
+              <div class="invalid-feedback">Se requiere el código de seguridad</div>
             </div>
           </div>
           <hr class="mb-4" />
           <button class="btn btn-primary btn-lg btn-block" type="submit">
-            Continue to checkout
+            Realizar compra
           </button>
         </form>
         <hr class="mb-4" />
         <div>
           <a class="btn btn-primary btn-lg btn-block" href="imbrioscia_cart.html">
-            Back to the cart
+            Volver al carrito
           </a>
       </div>
       </div>
@@ -449,14 +423,9 @@
         </div>
     </div>
   </footer>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"
-  ></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
   <script src="js/form-validation.js"></script>
-  <!-- <script src="js/imbrioscia_checkout.js"></script> -->
   </body>
 </html>

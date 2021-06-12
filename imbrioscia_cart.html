@@ -34,9 +34,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Productos</a>
                     </li>
-                    <!-- <li class="nav-item active">
-                        <a class="nav-link" href="clase3Imbrioscia.html">Carrito<span class="sr-only">(current)</span></a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
@@ -64,107 +61,28 @@
         </div>
     </section>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-7 col-12">
+            <div class="col-lg-7 col-12">
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th scope="col"> </th>
-                                <th scope="col">Producto</th>
-                                <th scope="col">Disponibilidad</th>
+                                <th scope="col" class="d-none d-sm-table-cell"> </th>
+                                <th scope="col" class="text-center">Producto</th>
+                                <th scope="col" class="text-center d-none d-sm-table-cell">Disponibilidad</th>
                                 <th scope="col" class="text-center">Cantidad</th>
                                 <th scope="col" class="text-right">Precio unitario</th>
                                 <th> </th>
                             </tr>
                         </thead>
                         <tbody id="prodTableBody">
-                            <!-- <tr>
-                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                                <td>Producto 1</td>
-                                <td id="prod1Stock">Chequeando stock...</td>
-                                <td>
-                                    <div class="col-4 col-sm-4 col-md-4">
-                                    <div class="quantity">
-                                        <input id="prod1Input" disabled type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
-                                    </div>
-                                    </div>
-                                </td>
-                                <td class="text-right" id="prod1Price">Chequeando precio...</td>
-                                <td>
-                                    <button class="btn btn-sm btn-success" id="prod1AddButton" onclick="addToCart(1)" disabled>
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /></td>
-                                <td>Producto 2</td>
-                                <td id="prod2Stock">Chequeando stock...</td>
-                                <td>
-                                    <div class="col-4 col-sm-4 col-md-4">
-                                    <div class="quantity">
-                                        <input id="prod2Input" disabled type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                            size="4">
-                                    </div>
-                                    </div
-                                ></td>
-                                <td class="text-right" id="prod2Price">Chequeando precio...</td>
-                                <td class="text-right">
-                                    <button class="btn btn-sm btn-success" id="prod2AddButton" onclick="addToCart(2)" disabled>
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                                <td>Producto 3</td>
-                                <td id="prod3Stock">Chequeando stock...</td>
-                                <td>
-                                    <div class="col-4 col-sm-4 col-md-4">
-                                    <div class="quantity">
-                                        <input id="prod3Input" disabled type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                            size="4">
-                                    </div>
-                                    </div
-                                ></td>
-                                <td class="text-right" id="prod3Price">Chequeando precio...</td>
-                                <td class="text-right">
-                                    <button class="btn btn-sm btn-success" id="prod3AddButton" onclick="addToCart(3)" disabled>
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </td>
-                            </tr> -->
-                            <!-- <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>Sub-Total</td>
-                                <td class="text-right" id="subtotal">255,90 $</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>Costo envio</td>
-                                <td class="text-right" id="shipCost"> 6,90 $</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><strong>Total</strong></td>
-                                <td class="text-right" id="total"><strong>346,90 $</strong></td>
-                            </tr> -->
+                           
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="col-sm-5 col-12">
+            <div class="col-lg-5 col-12">
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
@@ -190,34 +108,17 @@
                             <tr>
                                 <th colspan="2" class="text-center">Totales</th>
                             </tr>
-                            <!-- <tr>
-                                <th class="text-center">Productos</th>
-                                <th class="text-center">Cantidad</th>
-                                <th class="text-center">Eliminar</th>
-                            </tr> -->
                         </thead>
                         <tbody>
                             <tr>
-                                <!-- <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td> -->
                                 <td>Sub-Total</td>
                                 <td class="text-right" id="subtotal">$--</td>
                             </tr>
                             <tr>
-                                <!-- <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td> -->
                                 <td>Costo envio</td>
                                 <td class="text-right" id="shipCost">$--</td>
                             </tr>
                             <tr>
-                                <!-- <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td> -->
                                 <td><strong>Total</strong></td>
                                 <td class="text-right" id="total"><strong>$--</strong></td>
                             </tr>
@@ -231,11 +132,8 @@
                         <button onclick="workInProgress()" class="btn btn-lg btn-block btn-light">Continuar comprando</button>
                     </div>
                     <div class="col-sm-12 col-md-6 text-right">
-                        <a href="imbrioscia_checkout.html" class="btn btn-lg btn-block btn-success text-uppercase">Pagar</a>
+                        <button onclick="payButton()" class="btn btn-lg btn-block btn-success text-uppercase">Pagar</button>
                     </div>
-                    <!-- <div class="col-sm-12 col-md-6 text-right">
-                        <button onclick="" class="btn btn-lg btn-block btn-success text-uppercase">Ver perfil</button>
-                    </div> -->
                 </div>
             </div>
         </div>
